@@ -3,5 +3,5 @@ from rest_framework.response import Response
 
 class TestAPI(APIView):
 
-    def get(request):
+    def get(self, request):
         return Response({"massage": "Server is running", "status": 200})
