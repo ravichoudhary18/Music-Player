@@ -43,10 +43,10 @@ class Type(BaseModel):
         return self.type_of_music
 
 class Info(BaseModel):
-    composer = models.TextField(max_length=255, null=True, blank=True)
-    lyricist = models.TextField(max_length=255, null=True, blank=True)
-    songwriter = models.TextField(max_length=255, null=True, blank=True)
-    used_by = models.TextField(max_length=255, null=True, blank=True)
+    composer = models.CharField(max_length=255, null=True, blank=True)
+    lyricist = models.CharField(max_length=255, null=True, blank=True)
+    songwriter = models.CharField(max_length=255, null=True, blank=True)
+    used_by = models.CharField(max_length=255, null=True, blank=True)
 
     class Mata:
         db_table = 'infos'

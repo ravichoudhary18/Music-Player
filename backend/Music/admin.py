@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import Tag, Type, Info, Music
 
-# Register your models here.
+admin.site.register(Tag)
+admin.site.register(Type)
+admin.site.register(Info)
+admin.site.register(Music)
