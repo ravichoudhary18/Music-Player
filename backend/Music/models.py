@@ -21,8 +21,8 @@ class Tag(BaseModel):
         verbose_name = 'Tag'
         verbose_name_plural = 'Tag of Music'
         indexes = [
-        models.Index(fields=['tag']), 
-    ]
+            models.Index(fields=['tag']), 
+        ]
     
     def __str__(self):
         return self.tag
@@ -36,8 +36,8 @@ class Type(BaseModel):
         verbose_name = 'Type'
         verbose_name_plural = 'Type of Music'
         indexes = [
-        models.Index(fields=['type_of_music']), 
-    ]
+            models.Index(fields=['type_of_music']), 
+        ]
     
     def __str__(self):
         return self.type_of_music
@@ -54,9 +54,9 @@ class Info(BaseModel):
         verbose_name = 'Information'
         verbose_name_plural = 'Information of Music'
         indexes = [
-        models.Index(fields=['composer']),
-        models.Index(fields=['composer', 'lyricist'])
-    ]
+            models.Index(fields=['composer']),
+            models.Index(fields=['composer', 'lyricist'])
+        ]
     
     def __str__(self):
         return f'{self.composer}-{self.lyricist}-{self.songwriter}'
@@ -78,9 +78,9 @@ class Music(BaseModel):
         verbose_name = 'Music'
         verbose_name_plural = 'Music Library'
         indexes = [
-        models.Index(fields=['name']),
-        models.Index(fields=['name', 'info_id', 'tag_id', 'type_of_music_id'])
-    ]
+            models.Index(fields=['name']),
+            models.Index(fields=['name', 'info_id', 'tag_id', 'type_of_music_id'])
+        ]
     
     def __str__(self):
         return f'{self.name}'
