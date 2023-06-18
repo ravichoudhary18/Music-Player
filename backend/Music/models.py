@@ -65,7 +65,7 @@ class Info(BaseModel):
 class Music(BaseModel):
     name = models.CharField(max_length=255, null=False, blank=False)
     description = models.CharField(max_length=255, null=False, blank=False)
-    thumbnail = models.URLField(max_length=500, default='https://alcoholproject.blob.core.windows.net/mankind/capture_image_2022-12-27_17:31:58_893082.png')
+    thumbnail = models.URLField(max_length=500, default='https://alcoholproject.blob.core.windows.net/demo/music%20logo%20design.png')
     music = models.URLField(max_length=500, null=False, blank=False)
     lyricis = models.URLField(max_length=500, null=True, blank=True)
     info_id = models.OneToOneField(Info, on_delete=models.CASCADE)
